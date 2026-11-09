@@ -1,54 +1,65 @@
-# Rally — conference companion
+# Rally — conference notes and leaderboard
 
-A responsive React frontend for capturing session notes and comparing learning points on a leaderboard. Rally is a working name.
+React frontend with a local FastAPI adapter around the Elasticsearch scoring approach in `origin/main` (`compare_notes.py`, commit `3b62ccd`). The live flow is: choose the indexed talk → submit typed notes → save a score → refresh the leaderboard immediately. Other clients poll every five seconds.
 
-## Run locally
+## Run
 
-Requires Node.js 22.12+ (Node 24 recommended).
+Frontend (Node 22.12+):
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite. To check a production build, run `npm run build` and then `npm run preview`.
+Backend (run from the repository root, in a separate terminal):
 
-## Frontend structure
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r backend/requirements.txt
+.venv/bin/python -m uvicorn backend.app:app --host 127.0.0.1 --port 8000
+```
 
-- `src/main.jsx`: app shell and navigation; opens on Leaderboard.
-- `src/Leaderboard.jsx`: sample session scores, rankings, talk filter, attendee search, and current attendee standing.
-- `src/SessionNotes.jsx`: session draft, file attachment controls, image previews, review, and demo submission.
-- `src/styles.css`: responsive layout and styling.
+Copy the settings from `backend/.env.example` into a repository-root `.env.elasticsearch` and fill in Elasticsearch credentials privately. Restart the backend after changing `.env.elasticsearch`. The API defaults to `http://127.0.0.1:8000`; set `VITE_API_ORIGIN` in `.env.local` for a different API origin and restart Vite. The backend must allow that frontend origin through `FRONTEND_ORIGINS`.
 
-## Backend handoff
+Both `.env.elasticsearch` and `.env.local` are ignored. A partner's `localhost` URL refers to their machine, not yours. You need credentials for your own local Elasticsearch or a shared reachable service, with the `speech` index already populated. This adapter does not run the original vectorizer because that script deletes/recreates the index.
 
-Everything is currently demo data. Notes live only in React memory and reset on refresh. Leaderboard scores are fictional fixtures. Notes are not scored. Other attendees are fictional sample records. There is no authentication or API connection yet.
+## Scoring integration
 
-Agree on endpoints for talks, notes submission, and rankings before connecting the backend. Keep Elasticsearch credentials on the backend; do not put them in frontend code or commit `.env` files.
+- `GET /api/talks`: the supported indexed speech (`speech_id=dan_palotta`). Title: Rethinking charity; speaker: Dan Pallotta. More talks need transcript IDs and indexed vectors first.
+- `POST /api/notes`: `{attendee_id, attendee_name, talk_id, notes}`. Returns `{talk_id, score, points, saved, identity_mode}`.
+- `GET /api/leaderboard`: saved attendee scores grouped by talk.
+- `GET /api/health`: API liveness (does not prove Elasticsearch readiness).
 
-Google Fonts supplies the optional DM Sans and Manrope fonts; system fonts are used when unavailable.
+The adapter uses `all-MiniLM-L6-v2`, the same 384-dimensional vector field and full-speech/paragraph queries as the original scripts. Final score = full-speech similarity + 0.2 × average of up to three matching paragraph scores. Queries also filter by speech ID so talks cannot be mixed. The final score is saved once. Display points = round(score × 1000). This preserves the raw similarity as a separate value; it is not an understanding percentage. Review/calibrate this scoring policy with the backend owner.
 
-## Session notes uploads
+`backend/scorer.py` adapts the existing formula without importing the interactive CLI or modifying the partner's files. `backend/app.py` adds HTTP endpoints and stores scores in ignored `backend/data/scores.sqlite3`. Each attendee/talk has one saved result; resubmission replaces it. SQLite transactions prevent concurrent writes from corrupting the store. Existing `leaderboard.json` entries are not imported: that file keys scores by note ID and does not identify attendees/talks reliably. Retain it for the original CLI.
 
-Open **Sessions** or choose **Add your session notes** from the leaderboard. Enter the talk title, optionally enter the speaker, and attach files and/or type notes. Review the draft and save the demo submission.
+## Demo identity and current limits
 
-- Any file type can be selected, including images, PDFs, and documents. This does not imply that every format can be extracted by the future backend.
-- Up to 10 files, 20 MB each. Empty files are rejected; duplicates with the same name, size, and modification time are skipped.
-- Images have local previews where the browser supports the format. SVG files are attached without a preview.
-- Drafts survive navigation between app tabs but reset on browser refresh. No network upload, OCR, text extraction, or scoring currently occurs.
+Attendees enter a display name. A UUID is saved in browser local storage and sent with the request; different browsers remain separate even if names match. This is a demo identity, not authentication. Do not expose this API as a production service without real server-verified accounts. All attendees must use the same API/database to share a leaderboard.
 
-### Proposed backend contract (not implemented)
+Only typed notes are scored. Attachments remain a UI preview; remove them to enable submission. Notes stay in the form during errors, and no points are awarded on scoring failure. A timeout may happen after a server save; the polling leaderboard will reflect that save, and retries replace the same attendee/talk result rather than duplicate points. The first scoring request may download/load the model. Scores persist across server restarts, while note drafts reset on refresh. Notes themselves are not stored by this adapter.
 
-Use a multipart notes submission with a conference talk ID, optional typed notes, and repeated file attachments. Replace the manual talk title with a talk selector once the backend supplies the schedule and IDs. The backend should validate actual file types and sizes, extract text/OCR supported formats, and return clear unsupported-format errors.
+History, receipts, keyword highlights, real accounts, and OCR are deferred. The earlier `ScoringPreview` and sample schedule files are retained but not used in the live flow. No sample attendees are inserted into the live database.
 
-A submission should return an ID and processing status; subsequent results should include the understanding score, earned learning points, and key ideas covered/missed. Award points only after a successful server result. Keep activity points separate from learning points and prevent duplicate rewards for the same talk. Confirm the API shape with the backend owner before implementation.
+## Files
 
-## Leaderboard demo
+- `src/SessionNotes.jsx`: attendee name, talk selection, typed notes, API submission, results/errors.
+- `src/Leaderboard.jsx`, `src/rankings.js`: dynamic rankings, podium, filters, per-talk dropdowns.
+- `src/api.js`, `src/main.jsx`: API requests, browser identity, shared state, polling and immediate refresh.
+- `backend/app.py`, `backend/scorer.py`: persistence/API and Elasticsearch scoring adapter.
 
-The app now focuses on **Leaderboard** and **Sessions**. Activity features and the Overview screen are no longer exposed. Score receipts and History remain deferred.
+## Verification
 
-The leaderboard opens by default. Choose all sessions for summed learning points or a sample talk for its scores. Search filters the table without changing ranks; Find me clears search and scrolls to the highlighted attendee. Attendees without a score are excluded from individual talk rankings. Ties share competition rank (1, 1, 3). The current attendee has no score for the third sample talk, demonstrating that state. All names, scores, and talks are illustrative, not live backend data.
+```sh
+npm test
+npm run build
+.venv/bin/python -m pip install pytest httpx
+.venv/bin/python -m pytest tests/test_api.py tests/test_scorer.py -q
+```
 
-## Dash0 monitoring
+Tests inject a fixed scorer into a separate temporary database to verify submit/save/read, replacement, failure, validation, persistence, CORS, and the existing scoring formula. The isolated browser integration test also used a fixed scorer; it did not verify real Elasticsearch/model output. Real scoring remains pending local Elasticsearch credentials and an indexed transcript.
 
-Optional frontend monitoring and a backend tracing helper are prepared. Monitoring is off by default. See [observability/README.md](observability/README.md) for account configuration, frontend activation, Python instrumentation, and the backend API handoff. Run `npm test` for telemetry configuration and payload checks.
+## Dash0
+
+See [observability/README.md](observability/README.md). Browser monitoring is configured separately through `.env.local`; the local backend origin can be traced when `VITE_API_ORIGIN` is set and CORS allows `traceparent`. Earlier `rally.notes.demo_saved` events belong to the previous demo-save flow; they are not emitted as successful live scores. To instrument the API, configure the backend telemetry environment first and launch uvicorn under OpenTelemetry. Never export notes/transcripts or credentials in telemetry.

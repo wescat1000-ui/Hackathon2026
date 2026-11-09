@@ -8,3 +8,5 @@ dist/
 observability/backend.env.local
 __pycache__/
 .venv/
+backend/data/
+.pytest_cache/
