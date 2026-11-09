@@ -4,3 +4,7 @@ dist/
 .env.*
 !.env.example
 .DS_Store
+# Local backend observability credentials
+observability/backend.env.local
+__pycache__/
+.venv/

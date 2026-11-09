@@ -48,3 +48,7 @@ A submission should return an ID and processing status; subsequent results shoul
 The app now focuses on **Leaderboard** and **Sessions**. Activity features and the Overview screen are no longer exposed. Score receipts and History remain deferred.
 
 The leaderboard opens by default. Choose all sessions for summed learning points or a sample talk for its scores. Search filters the table without changing ranks; Find me clears search and scrolls to the highlighted attendee. Attendees without a score are excluded from individual talk rankings. Ties share competition rank (1, 1, 3). The current attendee has no score for the third sample talk, demonstrating that state. All names, scores, and talks are illustrative, not live backend data.
+
+## Dash0 monitoring
+
+Optional frontend monitoring and a backend tracing helper are prepared. Monitoring is off by default. See [observability/README.md](observability/README.md) for account configuration, frontend activation, Python instrumentation, and the backend API handoff. Run `npm test` for telemetry configuration and payload checks.

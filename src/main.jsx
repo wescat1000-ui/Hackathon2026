@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AudioLines, ChevronRight, Flag, Menu, Sparkles, Trophy } from 'lucide-react';
 import './styles.css';
 import SessionNotes from './SessionNotes';
 import Leaderboard from './Leaderboard';
+import { startTelemetry, trackView } from './telemetry';
+
+startTelemetry();
 
 function App() {
   const [tab, setTab] = useState('Leaderboard');
   const [draft, setDraft] = useState({ talk: '', speaker: '', notes: '', files: [] });
   const [mobile, setMobile] = useState(false);
+  useEffect(() => { trackView(tab); }, [tab]);
   function navigate(value) { setTab(value); setMobile(false); }
   return <div className="app">
     <aside className={`sidebar ${mobile ? 'open' : ''}`}>
