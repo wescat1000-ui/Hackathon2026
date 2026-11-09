@@ -10,3 +10,7 @@ __pycache__/
 .venv/
 backend/data/
 .pytest_cache/
+coverage.xml
+htmlcov/
+.coverage
+.scannerwork/

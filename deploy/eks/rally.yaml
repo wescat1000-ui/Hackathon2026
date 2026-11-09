@@ -1,0 +1,101 @@
+# Proposed resources for the confirmed team namespace. NOT applied automatically.
+# Replace COMMIT_SHA and arrange registry access with the hackathon deployment owner.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rally-scores
+  namespace: team-kingkonference
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  namespace: team-kingkonference
+  labels:
+    app: app
+    app.kubernetes.io/part-of: rally
+spec:
+  # One writable SQLite database; no competing replica-local score databases.
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+        app.kubernetes.io/part-of: rally
+    spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        runAsNonRoot: true
+      containers:
+        - name: app
+          image: ghcr.io/wescat1000-ui/hackathon2026:COMMIT_SHA
+          ports:
+            - name: http
+              containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: rally-elasticsearch
+          env:
+            - name: ELASTIC_INDEX
+              value: speech
+          resources:
+            requests:
+              cpu: 250m
+              memory: 768Mi
+            limits:
+              cpu: '2'
+              memory: 2Gi
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            failureThreshold: 60
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: http
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+          volumeMounts:
+            - name: scores
+              mountPath: /app/backend/data
+            - name: model-cache
+              mountPath: /app/model-cache
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: [ALL]
+      volumes:
+        - name: scores
+          persistentVolumeClaim:
+            claimName: rally-scores
+        - name: model-cache
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app
+  namespace: team-kingkonference
+spec:
+  selector:
+    app: app
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http

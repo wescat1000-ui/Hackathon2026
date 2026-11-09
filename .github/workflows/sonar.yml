@@ -1,0 +1,57 @@
+name: Tests and Sonar analysis
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: python -m pip install -r backend/requirements-test.txt
+      - run: python -m pytest tests --cov=backend --cov=observability --cov-report=xml:coverage.xml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: python-coverage
+          path: coverage.xml
+  sonar:
+    needs: verify
+    # No scan is claimed until the account's real project identifiers are configured.
+    if: vars.SONAR_PROJECT_KEY != '' && vars.SONAR_ORGANIZATION != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: python-coverage
+      - name: Check Sonar token
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: test -n "$SONAR_TOKEN" || { echo 'Add the SONAR_TOKEN repository secret to enable scanning.'; exit 1; }
+      - name: SonarQube Cloud scan
+        uses: SonarSource/sonarqube-scan-action@v8
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL || 'https://sonarcloud.io' }}
+        with:
+          args: >-
+            -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
+            -Dsonar.organization=${{ vars.SONAR_ORGANIZATION }}
+            -Dsonar.qualitygate.wait=true

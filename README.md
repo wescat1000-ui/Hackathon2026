@@ -63,3 +63,31 @@ Tests inject a fixed scorer into a separate temporary database to verify submit/
 ## Dash0
 
 See [observability/README.md](observability/README.md). Browser monitoring is configured separately through `.env.local`; the local backend origin can be traced when `VITE_API_ORIGIN` is set and CORS allows `traceparent`. Earlier `rally.notes.demo_saved` events belong to the previous demo-save flow; they are not emitted as successful live scores. To instrument the API, configure the backend telemetry environment first and launch uvicorn under OpenTelemetry. Never export notes/transcripts or credentials in telemetry.
+
+## Run everything on this Mac
+
+Use your own container's credentials in the ignored `.env.elasticsearch`, not your partner's local credentials. After dependencies are installed, load the restored transcript with:
+
+```sh
+.venv/bin/python -m backend.index_speech
+```
+
+This creates the speech index if missing and indexes documents with stable IDs; it never deletes an index. Keep `.env.local` set to `VITE_API_ORIGIN=http://127.0.0.1:8000`, then run the local backend and frontend using the commands above. Dash0 requires its separate browser-token settings to be restored if `.env.local` was removed.
+
+## Additional TED talks
+
+`data/talks.json` now drives the backend's live talk list. `backend/import_ted.py` imports a bounded list of three English TED talks, preserving the source paragraph boundaries in both `.txt` and paragraph-level `.json` files. Source links and attribution are in `data/transcripts/README.md`. Only successfully indexed catalog entries are returned by `/api/talks`; Sessions and leaderboard filters use that API automatically.
+
+```sh
+.venv/bin/python -m backend.import_ted
+.venv/bin/python -m backend.index_speech --pending
+```
+
+The indexer creates one 384-dimensional vector per paragraph and one for the full talk, using the original embedding model. It uses per-talk IDs and never deletes the speech index or score database. Scoring queries filter by the selected talk ID. Re-index the full catalog without `--pending` when installing on a fresh Elasticsearch instance. Restart the API after code changes; catalog updates themselves are read on each request. The single full-talk embedding retains the original model's truncation behavior; paragraph comparisons provide additional local matches.
+
+## Hackathon tool integrations
+
+- Elasticsearch: actively used for per-talk transcript vector matching.
+- Dash0: browser instrumentation exists; local activation requires restoring its dedicated ingest token in `.env.local`. Current local settings leave it disabled.
+- SonarQube Cloud: `sonar-project.properties` and `.github/workflows/sonar.yml` are prepared. Follow `docs/SONAR.md` to create/import the cloud project and configure the token/project keys. No cloud scan has been verified yet.
+- Skyhook Radar: official CLI installed locally, with a real Kubernetes gateway manifest at `deploy/kubernetes/rally-gateway.yaml`. Follow `docs/RADAR.md`. No local cluster exists yet, so Radar monitoring is not active. The working direct frontend/API/Elasticsearch setup is preserved.

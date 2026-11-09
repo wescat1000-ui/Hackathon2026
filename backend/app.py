@@ -8,14 +8,15 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 from backend.scorer import ElasticScorer, ScoringUnavailable
+from backend.catalog import load_talks
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / '.env.elasticsearch')
 load_dotenv(ROOT / '.env')  # Existing partner setup; environment values take precedence.
-TALKS = [{'id': 'dan_palotta', 'title': 'Rethinking charity', 'speaker': 'Dan Pallotta', 'time': '', 'topic': 'The nonprofit sector, social innovation, and how we think about giving.'}]
 
 class Submission(BaseModel):
     attendee_id: UUID
@@ -58,13 +59,15 @@ def create_app(db_path=None, scorer: Optional[Callable] = None):
         # Do not echo submitted note content in error responses or telemetry.
         return JSONResponse(status_code=422, content={'detail': 'Provide a valid attendee ID, attendee name, talk, and notes (up to 50,000 characters).'})
 
+    @app.get('/healthz')
+    @app.get('/readyz')
     @app.get('/api/health')
     def health():
         return {'status': 'ok', 'identity_mode': 'demo-browser-identity'}
 
     @app.get('/api/talks')
     def talks():
-        return {'talks': TALKS}
+        return {'talks': load_talks()}
 
     @app.get('/api/leaderboard')
     def leaderboard():
@@ -72,7 +75,7 @@ def create_app(db_path=None, scorer: Optional[Callable] = None):
 
     @app.post('/api/notes')
     def submit(data: Submission):
-        if data.talk_id not in {talk['id'] for talk in TALKS}:
+        if data.talk_id not in {talk['id'] for talk in load_talks()}:
             raise HTTPException(422, 'Choose an available talk.')
         if not data.notes.strip() or not data.attendee_name.strip():
             raise HTTPException(422, 'Add your attendee name and typed notes.')
@@ -91,6 +94,9 @@ def create_app(db_path=None, scorer: Optional[Callable] = None):
         except sqlite3.Error:
             raise HTTPException(503, 'The score could not be saved. Try again.') from None
         return {'talk_id': data.talk_id, 'score': score, 'points': points, 'saved': True, 'identity_mode': 'demo-browser-identity'}
+    frontend = os.getenv('RALLY_FRONTEND_DIST')
+    if frontend:
+        app.mount('/', StaticFiles(directory=frontend, html=True), name='frontend')
     return app
 
 app = create_app()

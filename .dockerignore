@@ -1,0 +1,16 @@
+*
+!Dockerfile
+!package.json
+!package-lock.json
+!index.html
+!src/
+!src/**
+!backend/
+!backend/**
+!data/
+!data/**
+**/.env
+**/.env.*
+**/__pycache__/
+**/*.pyc
+backend/data/

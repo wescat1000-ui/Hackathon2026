@@ -1,0 +1,7 @@
+# Tests use injected scorers; no model download or Elasticsearch server is required.
+fastapi>=0.115,<0.129
+elasticsearch>=9,<10
+python-dotenv>=1,<2
+httpx>=0.28,<1
+pytest>=8,<9
+pytest-cov>=6,<7

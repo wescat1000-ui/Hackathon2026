@@ -1,4 +1,4 @@
-const base = (import.meta.env.VITE_API_ORIGIN || 'http://127.0.0.1:8000').replace(/\/$/, '');
+const base = (import.meta.env.VITE_API_ORIGIN || (import.meta.env.DEV ? 'http://127.0.0.1:8000' : '')).replace(/\/$/, '');
 export async function apiRequest(path, { signal, body } = {}) {
   const timeout = new AbortController();
   const abort = () => timeout.abort();

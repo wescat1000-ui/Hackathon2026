@@ -53,3 +53,13 @@ def test_cors_allows_frontend_trace_context(client):
     response=client.options('/api/notes',headers={'Origin':'http://127.0.0.1:5173','Access-Control-Request-Method':'POST','Access-Control-Request-Headers':'content-type,traceparent'})
     assert response.status_code==200
     assert response.headers['access-control-allow-origin']=='http://127.0.0.1:5173'
+
+def test_frontend_can_share_api_origin(tmp_path, monkeypatch):
+    dist=tmp_path / 'dist';dist.mkdir();(dist / 'index.html').write_text('<html>Rally frontend</html>')
+    monkeypatch.setenv('RALLY_FRONTEND_DIST',str(dist))
+    client=TestClient(create_app(tmp_path / 'scores.sqlite3',scorer=lambda *args:0.9))
+    assert client.get('/').status_code==200
+    assert 'Rally frontend' in client.get('/').text
+    assert client.get('/api/talks').json()['talks']
+    assert client.get('/healthz').json()['status']=='ok'
+    assert client.get('/readyz').status_code==200
