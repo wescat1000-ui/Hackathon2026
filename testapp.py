@@ -3,12 +3,16 @@ from dotenv import load_dotenv
 from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformer
 
-load_dotenv()
+# Force reload environment variables
+load_dotenv(override=True)
 
-# 1. Connect to local Elasticsearch
+ELASTIC_URL = os.getenv("ELASTIC_URL", "http://localhost:9200")
+ELASTIC_PASSWORD = os.getenv("ELASTIC_PASSWORD", "2Z6L225U")
+
+# 1. Connect to local Elasticsearch using basic auth (matching your successful setup)
 es = Elasticsearch(
-    os.getenv("ELASTIC_URL", "http://localhost:9200"),
-    api_key=os.getenv("ELASTIC_API_KEY")
+    ELASTIC_URL,
+    basic_auth=("elastic", ELASTIC_PASSWORD)
 )
 
 # Test cluster status
