@@ -1,0 +1,6 @@
+# Python 3.9 compatible API dependencies. Install inside a virtual environment.
+fastapi>=0.115,<0.129
+uvicorn>=0.30,<0.40
+elasticsearch>=9,<10
+python-dotenv>=1,<2
+sentence-transformers>=3,<4

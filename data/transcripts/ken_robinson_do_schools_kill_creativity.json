@@ -1,0 +1,545 @@
+{
+  "talk": {
+    "id": "ted_66",
+    "title": "Do schools kill creativity?",
+    "speaker": "Sir Ken Robinson",
+    "time": "",
+    "topic": "TED talk · English transcript",
+    "source_url": "https://www.ted.com/talks/ken_robinson_do_schools_kill_creativity",
+    "license": "CC BY-NC-ND 4.0 (TED usage policy applies)",
+    "license_url": "https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy",
+    "attribution": "Sir Ken Robinson / TED Conferences LLC",
+    "retrieved_at": "2026-11-09T22:44:13.560049+00:00",
+    "transcript_path": "data/transcripts/ken_robinson_do_schools_kill_creativity.txt",
+    "paragraphs_path": "data/transcripts/ken_robinson_do_schools_kill_creativity.json",
+    "paragraph_count": 105,
+    "indexed": false
+  },
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "Good morning. How are you?",
+      "start_ms": 2103
+    },
+    {
+      "index": 1,
+      "text": "(Audience) Good.",
+      "start_ms": 4702
+    },
+    {
+      "index": 2,
+      "text": "It's been great, hasn't it? I've been blown away by the whole thing. In fact, I'm leaving.",
+      "start_ms": 6129
+    },
+    {
+      "index": 3,
+      "text": "(Laughter)",
+      "start_ms": 12269
+    },
+    {
+      "index": 4,
+      "text": "There have been three themes\nrunning through the conference, which are relevant\nto what I want to talk about. One is the extraordinary\nevidence of human creativity in all of the presentations that we've had and in all of the people here; just the variety of it\nand the range of it. The second is that it's put us in a place where we have no idea\nwhat's going to happen in terms of the future. No idea how this may play out.",
+      "start_ms": 18096
+    },
+    {
+      "index": 5,
+      "text": "I have an interest in education. Actually, what I find is,\neverybody has an interest in education. Don't you? I find this very interesting. If you're at a dinner party,\nand you say you work in education -- actually, you're not often\nat dinner parties, frankly.",
+      "start_ms": 45270
+    },
+    {
+      "index": 6,
+      "text": "(Laughter)",
+      "start_ms": 60870
+    },
+    {
+      "index": 7,
+      "text": "If you work in education,\nyou're not asked.",
+      "start_ms": 64690
+    },
+    {
+      "index": 8,
+      "text": "(Laughter)",
+      "start_ms": 67142
+    },
+    {
+      "index": 9,
+      "text": "And you're never asked back, curiously.\nThat's strange to me. But if you are, and you say to somebody, you know, they say, \"What do you do?\" and you say you work in education, you can see the blood run from their face. They're like, \"Oh my God. Why me?\"",
+      "start_ms": 70345
+    },
+    {
+      "index": 10,
+      "text": "(Laughter)",
+      "start_ms": 83864
+    },
+    {
+      "index": 11,
+      "text": "\"My one night out all week.\"",
+      "start_ms": 86164
+    },
+    {
+      "index": 12,
+      "text": "(Laughter)",
+      "start_ms": 87712
+    },
+    {
+      "index": 13,
+      "text": "But if you ask about their education,\nthey pin you to the wall, because it's one of those things\nthat goes deep with people, am I right? Like religion and money and other things. So I have a big interest in education,\nand I think we all do. We have a huge vested interest in it, partly because it's education\nthat's meant to take us into this future that we can't grasp. If you think of it, children starting school this year\nwill be retiring in 2065. Nobody has a clue, despite all the expertise that's been\non parade for the past four days, what the world will look like\nin five years' time. And yet, we're meant\nto be educating them for it. So the unpredictability,\nI think, is extraordinary.",
+      "start_ms": 90346
+    },
+    {
+      "index": 14,
+      "text": "And the third part of this\nis that we've all agreed, nonetheless, on the really extraordinary\ncapacities that children have -- their capacities for innovation. I mean, Sirena last night\nwas a marvel, wasn't she? Just seeing what she could do. And she's exceptional, but I think\nshe's not, so to speak, exceptional in the whole of childhood. What you have there is a person\nof extraordinary dedication who found a talent. And my contention is,\nall kids have tremendous talents, and we squander them, pretty ruthlessly.",
+      "start_ms": 132892
+    },
+    {
+      "index": 15,
+      "text": "So I want to talk about education, and I want to talk about creativity. My contention is that creativity now\nis as important in education as literacy, and we should treat it\nwith the same status.",
+      "start_ms": 166119
+    },
+    {
+      "index": 16,
+      "text": "(Applause)",
+      "start_ms": 178827
+    },
+    {
+      "index": 17,
+      "text": "Thank you.",
+      "start_ms": 179963
+    },
+    {
+      "index": 18,
+      "text": "(Applause)",
+      "start_ms": 181176
+    },
+    {
+      "index": 19,
+      "text": "That was it, by the way.\nThank you very much.",
+      "start_ms": 185485
+    },
+    {
+      "index": 20,
+      "text": "(Laughter)",
+      "start_ms": 187795
+    },
+    {
+      "index": 21,
+      "text": "So, 15 minutes left.",
+      "start_ms": 189934
+    },
+    {
+      "index": 22,
+      "text": "(Laughter)",
+      "start_ms": 191635
+    },
+    {
+      "index": 23,
+      "text": "\"Well, I was born ... \"",
+      "start_ms": 194816
+    },
+    {
+      "index": 24,
+      "text": "(Laughter)",
+      "start_ms": 196511
+    },
+    {
+      "index": 25,
+      "text": "I heard a great story recently --\nI love telling it -- of a little girl\nwho was in a drawing lesson. She was six, and she was\nat the back, drawing, and the teacher said this girl\nhardly ever paid attention, and in this drawing lesson, she did. The teacher was fascinated. She went over to her,\nand she said, \"What are you drawing?\" And the girl said,\n\"I'm drawing a picture of God.\" And the teacher said, \"But nobody\nknows what God looks like.\" And the girl said,\n\"They will in a minute.\"",
+      "start_ms": 200006
+    },
+    {
+      "index": 26,
+      "text": "(Laughter)",
+      "start_ms": 225096
+    },
+    {
+      "index": 27,
+      "text": "When my son was four in England -- actually, he was four\neverywhere, to be honest.",
+      "start_ms": 236662
+    },
+    {
+      "index": 28,
+      "text": "(Laughter)",
+      "start_ms": 241628
+    },
+    {
+      "index": 29,
+      "text": "If we're being strict about it,\nwherever he went, he was four that year. He was in the Nativity play.\nDo you remember the story?",
+      "start_ms": 243404
+    },
+    {
+      "index": 30,
+      "text": "(Laughter)",
+      "start_ms": 249477
+    },
+    {
+      "index": 31,
+      "text": "No, it was big, it was a big story. Mel Gibson did the sequel,\nyou may have seen it.",
+      "start_ms": 250720
+    },
+    {
+      "index": 32,
+      "text": "(Laughter)",
+      "start_ms": 254900
+    },
+    {
+      "index": 33,
+      "text": "\"Nativity II.\" But James got the part of Joseph,\nwhich we were thrilled about. We considered this to be\none of the lead parts. We had the place crammed\nfull of agents in T-shirts: \"James Robinson IS Joseph!\" (Laughter) He didn't have to speak, but you know\nthe bit where the three kings come in? They come in bearing gifts,\ngold, frankincense and myrrh. This really happened. We were sitting there, and I think\nthey just went out of sequence, because we talked to the little boy\nafterward and said, \"You OK with that?\" They said,\n\"Yeah, why? Was that wrong?\" They just switched. The three boys came in, four-year-olds\nwith tea towels on their heads. They put these boxes down, and the first\nboy said, \"I bring you gold.\" And the second boy said,\n\"I bring you myrrh.\" And the third boy said, \"Frank sent this.\"",
+      "start_ms": 256185
+    },
+    {
+      "index": 34,
+      "text": "(Laughter)",
+      "start_ms": 297984
+    },
+    {
+      "index": 35,
+      "text": "What these things have in common\nis that kids will take a chance. If they don't know, they'll have a go. Am I right? They're not\nfrightened of being wrong. I don't mean to say that being wrong\nis the same thing as being creative. What we do know is,\nif you're not prepared to be wrong, you'll never come up\nwith anything original -- if you're not prepared to be wrong. And by the time they get to be adults,\nmost kids have lost that capacity. They have become\nfrightened of being wrong. And we run our companies like this. We stigmatize mistakes. And we're now running\nnational education systems where mistakes are the worst\nthing you can make. And the result is that\nwe are educating people out of their creative capacities.",
+      "start_ms": 310711
+    },
+    {
+      "index": 36,
+      "text": "Picasso once said this, he said\nthat all children are born artists. The problem is to remain\nan artist as we grow up. I believe this passionately,\nthat we don't grow into creativity, we grow out of it. Or rather, we get educated out of it. So why is this?",
+      "start_ms": 354298
+    },
+    {
+      "index": 37,
+      "text": "I lived in Stratford-on-Avon\nuntil about five years ago. In fact, we moved from Stratford\nto Los Angeles. So you can imagine\nwhat a seamless transition this was.",
+      "start_ms": 372124
+    },
+    {
+      "index": 38,
+      "text": "(Laughter)",
+      "start_ms": 380560
+    },
+    {
+      "index": 39,
+      "text": "Actually, we lived in a place\ncalled Snitterfield, just outside Stratford, which is where\nShakespeare's father was born. Are you struck by a new thought? I was. You don't think of Shakespeare\nhaving a father, do you? Do you? Because you don't think\nof Shakespeare being a child, do you? Shakespeare being seven? I never thought of it. I mean, he was seven at some point. He was in somebody's\nEnglish class, wasn't he?",
+      "start_ms": 382000
+    },
+    {
+      "index": 40,
+      "text": "(Laughter)",
+      "start_ms": 403906
+    },
+    {
+      "index": 41,
+      "text": "How annoying would that be?",
+      "start_ms": 410717
+    },
+    {
+      "index": 42,
+      "text": "(Laughter)",
+      "start_ms": 412070
+    },
+    {
+      "index": 43,
+      "text": "\"Must try harder.\"",
+      "start_ms": 419939
+    },
+    {
+      "index": 44,
+      "text": "(Laughter)",
+      "start_ms": 421303
+    },
+    {
+      "index": 45,
+      "text": "Being sent to bed by his dad,\nto Shakespeare, \"Go to bed, now!\" To William Shakespeare. \"And put the pencil down!\"",
+      "start_ms": 425559
+    },
+    {
+      "index": 46,
+      "text": "(Laughter)",
+      "start_ms": 431041
+    },
+    {
+      "index": 47,
+      "text": "\"And stop speaking like that.\"",
+      "start_ms": 432140
+    },
+    {
+      "index": 48,
+      "text": "(Laughter)",
+      "start_ms": 433641
+    },
+    {
+      "index": 49,
+      "text": "\"It's confusing everybody.\"",
+      "start_ms": 437244
+    },
+    {
+      "index": 50,
+      "text": "(Laughter)",
+      "start_ms": 438592
+    },
+    {
+      "index": 51,
+      "text": "Anyway, we moved\nfrom Stratford to Los Angeles, and I just want to say a word\nabout the transition. Actually, my son didn't want to come. I've got two kids;\nhe's 21 now, my daughter's 16. He didn't want to come to Los Angeles. He loved it, but he had\na girlfriend in England. This was the love of his life, Sarah. He'd known her for a month.",
+      "start_ms": 443886
+    },
+    {
+      "index": 52,
+      "text": "(Laughter)",
+      "start_ms": 466160
+    },
+    {
+      "index": 53,
+      "text": "Mind you, they'd had\ntheir fourth anniversary, because it's a long time when you're 16. He was really upset on the plane. He said, \"I'll never find\nanother girl like Sarah.\" And we were rather pleased\nabout that, frankly --",
+      "start_ms": 467534
+    },
+    {
+      "index": 54,
+      "text": "(Laughter)",
+      "start_ms": 479231
+    },
+    {
+      "index": 55,
+      "text": "because she was the main reason\nwe were leaving the country.",
+      "start_ms": 487434
+    },
+    {
+      "index": 56,
+      "text": "(Laughter)",
+      "start_ms": 490404
+    },
+    {
+      "index": 57,
+      "text": "But something strikes you\nwhen you move to America and travel around the world: every education system on earth\nhas the same hierarchy of subjects. Every one. Doesn't matter where you go. You'd think it would be\notherwise, but it isn't. At the top are mathematics and languages,\nthen the humanities. At the bottom are the arts.\nEverywhere on earth. And in pretty much every system, too,\nthere's a hierarchy within the arts. Art and music are normally given\na higher status in schools than drama and dance. There isn't an education\nsystem on the planet that teaches dance every day to children the way we teach them mathematics. Why? Why not? I think this is rather important. I think math is very important,\nbut so is dance. Children dance all the time\nif they're allowed to, we all do. We all have bodies, don't we?\nDid I miss a meeting?",
+      "start_ms": 496141
+    },
+    {
+      "index": 58,
+      "text": "(Laughter)",
+      "start_ms": 539257
+    },
+    {
+      "index": 59,
+      "text": "Truthfully, what happens is,\nas children grow up, we start to educate them progressively\nfrom the waist up. And then we focus on their heads. And slightly to one side.",
+      "start_ms": 542645
+    },
+    {
+      "index": 60,
+      "text": "If you were to visit education as an alien and say \"What's it for, public education?\" I think you'd have to conclude,\nif you look at the output, who really succeeds by this, who does everything they should, who gets all the brownie points,\nwho are the winners -- I think you'd have to conclude\nthe whole purpose of public education throughout the world is to produce university professors. Isn't it? They're the people who come out the top. And I used to be one, so there.",
+      "start_ms": 552044
+    },
+    {
+      "index": 61,
+      "text": "(Laughter)",
+      "start_ms": 577761
+    },
+    {
+      "index": 62,
+      "text": "And I like university professors, but, you know, we shouldn't hold them up as the high-water mark\nof all human achievement. They're just a form of life. Another form of life. But they're rather curious. And I say this out of affection for them: there's something curious\nabout professors. In my experience -- not all of them,\nbut typically -- they live in their heads. They live up there\nand slightly to one side. They're disembodied, you know,\nin a kind of literal way. They look upon their body as a form\nof transport for their heads.",
+      "start_ms": 581482
+    },
+    {
+      "index": 63,
+      "text": "(Laughter)",
+      "start_ms": 610129
+    },
+    {
+      "index": 64,
+      "text": "Don't they? It's a way of getting\ntheir head to meetings.",
+      "start_ms": 616200
+    },
+    {
+      "index": 65,
+      "text": "(Laughter)",
+      "start_ms": 619770
+    },
+    {
+      "index": 66,
+      "text": "If you want real evidence\nof out-of-body experiences, by the way, get yourself along to a residential\nconference of senior academics and pop into the discotheque\non the final night.",
+      "start_ms": 625022
+    },
+    {
+      "index": 67,
+      "text": "(Laughter)",
+      "start_ms": 634842
+    },
+    {
+      "index": 68,
+      "text": "And there, you will see it. Grown men and women\nwrithing uncontrollably, off the beat.",
+      "start_ms": 637478
+    },
+    {
+      "index": 69,
+      "text": "(Laughter)",
+      "start_ms": 643375
+    },
+    {
+      "index": 70,
+      "text": "Waiting until it ends, so they can\ngo home and write a paper about it.",
+      "start_ms": 645891
+    },
+    {
+      "index": 71,
+      "text": "(Laughter)",
+      "start_ms": 649240
+    },
+    {
+      "index": 72,
+      "text": "Our education system is predicated\non the idea of academic ability. And there's a reason. Around the world, there were\nno public systems of education, really, before the 19th century. They all came into being\nto meet the needs of industrialism. So the hierarchy is rooted on two ideas.",
+      "start_ms": 651245
+    },
+    {
+      "index": 73,
+      "text": "Number one, that the most useful\nsubjects for work are at the top. So you were probably steered benignly away\nfrom things at school when you were a kid, things you liked, on the grounds you would never\nget a job doing that. Is that right? \"Don't do music, you're not\ngoing to be a musician; don't do art, you won't be an artist.\" Benign advice -- now, profoundly mistaken. The whole world\nis engulfed in a revolution.",
+      "start_ms": 667456
+    },
+    {
+      "index": 74,
+      "text": "And the second is academic ability, which has really come to dominate\nour view of intelligence, because the universities design\nthe system in their image. If you think of it, the whole system of public education\naround the world is a protracted process of university entrance. And the consequence is\nthat many highly talented, brilliant, creative people\nthink they're not, because the thing\nthey were good at at school wasn't valued,\nor was actually stigmatized. And I think we can't afford\nto go on that way.",
+      "start_ms": 690343
+    },
+    {
+      "index": 75,
+      "text": "In the next 30 years, according to UNESCO, more people worldwide will be\ngraduating through education than since the beginning of history. More people. And it's the combination\nof all the things we've talked about: technology and its\ntransformational effect on work, and demography and the huge\nexplosion in population.",
+      "start_ms": 715703
+    },
+    {
+      "index": 76,
+      "text": "Suddenly, degrees aren't worth anything. Isn't that true? When I was a student,\nif you had a degree, you had a job. If you didn't have a job,\nit's because you didn't want one. And I didn't want one, frankly.",
+      "start_ms": 732708
+    },
+    {
+      "index": 77,
+      "text": "(Laughter)",
+      "start_ms": 745055
+    },
+    {
+      "index": 78,
+      "text": "But now kids with degrees\nare often heading home to carry on playing video games, because you need an MA\nwhere the previous job required a BA, and now you need a PhD for the other. It's a process of academic inflation. And it indicates the whole structure\nof education is shifting beneath our feet. We need to radically rethink\nour view of intelligence.",
+      "start_ms": 746670
+    },
+    {
+      "index": 79,
+      "text": "We know three things about intelligence. One, it's diverse. We think about the world in all the ways\nthat we experience it. We think visually, we think in sound,\nwe think kinesthetically. We think in abstract terms,\nwe think in movement. Secondly, intelligence is dynamic. If you look at the interactions\nof a human brain, as we heard yesterday\nfrom a number of presentations, intelligence is wonderfully interactive. The brain isn't divided into compartments. In fact, creativity -- which I define as the process of having\noriginal ideas that have value -- more often than not comes about through the interaction of different\ndisciplinary ways of seeing things.",
+      "start_ms": 765346
+    },
+    {
+      "index": 80,
+      "text": "By the way, there's a shaft of nerves\nthat joins the two halves of the brain, called the corpus callosum. It's thicker in women. Following off from Helen yesterday, this is probably why women\nare better at multitasking. Because you are, aren't you? There's a raft of research,\nbut I know it from my personal life. If my wife is cooking a meal\nat home, which is not often ... thankfully.",
+      "start_ms": 802472
+    },
+    {
+      "index": 81,
+      "text": "(Laughter)",
+      "start_ms": 825414
+    },
+    {
+      "index": 82,
+      "text": "No, she's good at some things. But if she's cooking,\nshe's dealing with people on the phone, she's talking to the kids,\nshe's painting the ceiling --",
+      "start_ms": 828128
+    },
+    {
+      "index": 83,
+      "text": "(Laughter)",
+      "start_ms": 835194
+    },
+    {
+      "index": 84,
+      "text": "she's doing open-heart surgery over here. If I'm cooking, the door\nis shut, the kids are out, the phone's on the hook, if she comes in, I get annoyed. I say, \"Terry, please,\nI'm trying to fry an egg in here.\"",
+      "start_ms": 836233
+    },
+    {
+      "index": 85,
+      "text": "(Laughter)",
+      "start_ms": 847095
+    },
+    {
+      "index": 86,
+      "text": "\"Give me a break.\"",
+      "start_ms": 854254
+    },
+    {
+      "index": 87,
+      "text": "(Laughter)",
+      "start_ms": 855478
+    },
+    {
+      "index": 88,
+      "text": "Actually, do you know\nthat old philosophical thing, \"If a tree falls in a forest,\nand nobody hears it, did it happen?\" Remember that old chestnut? I saw a great T-shirt\nrecently, which said, \"If a man speaks his mind in a forest,\nand no woman hears him, is he still wrong?\"",
+      "start_ms": 857222
+    },
+    {
+      "index": 89,
+      "text": "(Laughter)",
+      "start_ms": 872420
+    },
+    {
+      "index": 90,
+      "text": "And the third thing about intelligence is, it's distinct. I'm doing a new book at the moment\ncalled \"Epiphany,\" which is based on a series\nof interviews with people about how they discovered their talent. I'm fascinated by\nhow people got to be there. It's really prompted by a conversation\nI had with a wonderful woman who maybe most people\nhave never heard of, Gillian Lynne. Have you heard of her? Some have. She's a choreographer,\nand everybody knows her work. She did \"Cats\" and \"Phantom of the Opera.\" She's wonderful. I used to be on the board\nof The Royal Ballet, as you can see.",
+      "start_ms": 880089
+    },
+    {
+      "index": 91,
+      "text": "(Laughter)",
+      "start_ms": 909338
+    },
+    {
+      "index": 92,
+      "text": "Gillian and I had lunch one day.\nI said, \"How did you get to be a dancer?\" It was interesting. When she was at school,\nshe was really hopeless. And the school, in the '30s,\nwrote to her parents and said, \"We think Gillian\nhas a learning disorder.\" She couldn't concentrate;\nshe was fidgeting. I think now they'd say she had ADHD. Wouldn't you? But this was the 1930s, and ADHD\nhadn't been invented at this point. It wasn't an available condition.",
+      "start_ms": 911291
+    },
+    {
+      "index": 93,
+      "text": "(Laughter)",
+      "start_ms": 934769
+    },
+    {
+      "index": 94,
+      "text": "People weren't aware they could have that.",
+      "start_ms": 938008
+    },
+    {
+      "index": 95,
+      "text": "(Laughter)",
+      "start_ms": 940074
+    },
+    {
+      "index": 96,
+      "text": "Anyway, she went to see this specialist. So, this oak-paneled room,\nand she was there with her mother, and she was led and sat\non this chair at the end, and she sat on her hands for 20 minutes, while this man talked to her mother about all the problems\nGillian was having at school, because she was disturbing people,\nher homework was always late, and so on. Little kid of eight. In the end, the doctor went\nand sat next to Gillian and said, \"I've listened to all these\nthings your mother's told me. I need to speak to her privately. Wait here. We'll be back.\nWe won't be very long,\" and they went and left her.",
+      "start_ms": 942523
+    },
+    {
+      "index": 97,
+      "text": "But as they went out of the room, he turned on the radio\nthat was sitting on his desk. And when they got out of the room, he said to her mother,\n\"Just stand and watch her.\" And the minute they left the room, she was on her feet, moving to the music. And they watched for a few minutes,\nand he turned to her mother and said, \"Mrs. Lynne, Gillian isn't sick. She's a dancer. Take her to a dance school.\"",
+      "start_ms": 976019
+    },
+    {
+      "index": 98,
+      "text": "I said, \"What happened?\" She said, \"She did. I can't tell you\nhow wonderful it was. We walked in this room,\nand it was full of people like me -- people who couldn't sit still, people who had to move to think.\" Who had to move to think. They did ballet, they did tap, jazz;\nthey did modern; they did contemporary. She was eventually auditioned\nfor the Royal Ballet School. She became a soloist; she had\na wonderful career at the Royal Ballet. She eventually graduated\nfrom the Royal Ballet School, founded the Gillian Lynne Dance Company, met Andrew Lloyd Webber. She's been responsible for some of the most successful\nmusical theater productions in history, she's given pleasure to millions, and she's a multimillionaire. Somebody else might have put her\non medication and told her to calm down.",
+      "start_ms": 999748
+    },
+    {
+      "index": 99,
+      "text": "(Applause)",
+      "start_ms": 1040636
+    },
+    {
+      "index": 100,
+      "text": "What I think it comes to is this: Al Gore spoke the other night about ecology and the revolution\nthat was triggered by Rachel Carson. I believe our only hope for the future is to adopt a new conception\nof human ecology, one in which we start\nto reconstitute our conception of the richness of human capacity. Our education system has mined our minds in the way that we strip-mine the earth\nfor a particular commodity. And for the future, it won't serve us. We have to rethink\nthe fundamental principles on which we're educating our children.",
+      "start_ms": 1048603
+    },
+    {
+      "index": 101,
+      "text": "There was a wonderful quote\nby Jonas Salk, who said, \"If all the insects\nwere to disappear from the Earth, within 50 years,\nall life on Earth would end. If all human beings\ndisappeared from the Earth, within 50 years,\nall forms of life would flourish.\" And he's right.",
+      "start_ms": 1082087
+    },
+    {
+      "index": 102,
+      "text": "What TED celebrates is the gift\nof the human imagination. We have to be careful now\nthat we use this gift wisely, and that we avert some of the scenarios\nthat we've talked about. And the only way we'll do it\nis by seeing our creative capacities for the richness they are and seeing our children\nfor the hope that they are. And our task is to educate\ntheir whole being, so they can face this future. By the way -- we may not see this future, but they will. And our job is to help them\nmake something of it.",
+      "start_ms": 1102390
+    },
+    {
+      "index": 103,
+      "text": "Thank you very much.",
+      "start_ms": 1133557
+    },
+    {
+      "index": 104,
+      "text": "(Applause)",
+      "start_ms": 1134766
+    }
+  ]
+}

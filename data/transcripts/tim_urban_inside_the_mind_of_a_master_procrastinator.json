@@ -1,0 +1,380 @@
+{
+  "talk": {
+    "id": "ted_2458",
+    "title": "Inside the mind of a master procrastinator",
+    "speaker": "Tim Urban",
+    "time": "",
+    "topic": "TED talk · English transcript",
+    "source_url": "https://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator",
+    "license": "CC BY-NC-ND 4.0 (TED usage policy applies)",
+    "license_url": "https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy",
+    "attribution": "Tim Urban / TED Conferences LLC",
+    "retrieved_at": "2026-11-09T22:44:14.732225+00:00",
+    "transcript_path": "data/transcripts/tim_urban_inside_the_mind_of_a_master_procrastinator.txt",
+    "paragraphs_path": "data/transcripts/tim_urban_inside_the_mind_of_a_master_procrastinator.json",
+    "paragraph_count": 72,
+    "indexed": false
+  },
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "So in college, I was a government major, which means I had to write\na lot of papers. Now, when a normal student writes a paper, they might spread the work out\na little like this. So, you know --",
+      "start_ms": 645
+    },
+    {
+      "index": 1,
+      "text": "(Laughter)",
+      "start_ms": 13067
+    },
+    {
+      "index": 2,
+      "text": "you get started maybe a little slowly, but you get enough done in the first week that, with some heavier days later on, everything gets done, things stay civil.",
+      "start_ms": 14748
+    },
+    {
+      "index": 3,
+      "text": "(Laughter)",
+      "start_ms": 22627
+    },
+    {
+      "index": 4,
+      "text": "And I would want to do that like that. That would be the plan. I would have it all ready to go, but then, actually, the paper\nwould come along, and then I would kind of do this.",
+      "start_ms": 23853
+    },
+    {
+      "index": 5,
+      "text": "(Laughter)",
+      "start_ms": 34363
+    },
+    {
+      "index": 6,
+      "text": "And that would happen every single paper.",
+      "start_ms": 36757
+    },
+    {
+      "index": 7,
+      "text": "But then came my 90-page senior thesis, a paper you're supposed\nto spend a year on. And I knew for a paper like that,\nmy normal work flow was not an option. It was way too big a project. So I planned things out, and I decided I kind of had\nto go something like this. This is how the year would go. So I'd start off light, and I'd bump it up in the middle months, and then at the end,\nI would kick it up into high gear just like a little staircase. How hard could it be\nto walk up the stairs? No big deal, right?",
+      "start_ms": 39638
+    },
+    {
+      "index": 8,
+      "text": "But then, the funniest thing happened. Those first few months? They came and went, and I couldn't quite do stuff. So we had an awesome new revised plan.",
+      "start_ms": 71090
+    },
+    {
+      "index": 9,
+      "text": "(Laughter)",
+      "start_ms": 79464
+    },
+    {
+      "index": 10,
+      "text": "And then --",
+      "start_ms": 80655
+    },
+    {
+      "index": 11,
+      "text": "(Laughter)",
+      "start_ms": 81838
+    },
+    {
+      "index": 12,
+      "text": "But then those middle months\nactually went by, and I didn't really write words, and so we were here. And then two months turned into one month, which turned into two weeks. And one day I woke up with three days until the deadline, still not having written a word, and so I did the only thing I could: I wrote 90 pages over 72 hours, pulling not one but two all-nighters -- humans are not supposed to pull\ntwo all-nighters -- sprinted across campus, dove in slow motion, and got it in just at the deadline.",
+      "start_ms": 83744
+    },
+    {
+      "index": 13,
+      "text": "I thought that was the end of everything. But a week later I get a call, and it's the school. And they say, \"Is this Tim Urban?\" And I say, \"Yeah.\" And they say, \"We need\nto talk about your thesis.\" And I say, \"OK.\" And they say, \"It's the best one we've ever seen.\"",
+      "start_ms": 119980
+    },
+    {
+      "index": 14,
+      "text": "(Laughter)",
+      "start_ms": 137150
+    },
+    {
+      "index": 15,
+      "text": "(Applause)",
+      "start_ms": 140014
+    },
+    {
+      "index": 16,
+      "text": "That did not happen.",
+      "start_ms": 144945
+    },
+    {
+      "index": 17,
+      "text": "(Laughter)",
+      "start_ms": 146271
+    },
+    {
+      "index": 18,
+      "text": "It was a very, very bad thesis.",
+      "start_ms": 148433
+    },
+    {
+      "index": 19,
+      "text": "(Laughter)",
+      "start_ms": 151080
+    },
+    {
+      "index": 20,
+      "text": "I just wanted to enjoy that one moment\nwhen all of you thought, \"This guy is amazing!\"",
+      "start_ms": 153378
+    },
+    {
+      "index": 21,
+      "text": "(Laughter)",
+      "start_ms": 159431
+    },
+    {
+      "index": 22,
+      "text": "No, no, it was very, very bad. Anyway, today I'm a writer-blogger guy. I write the blog Wait But Why. And a couple of years ago,\nI decided to write about procrastination. My behavior has always perplexed\nthe non-procrastinators around me, and I wanted to explain\nto the non-procrastinators of the world what goes on in the heads\nof procrastinators, and why we are the way we are. Now, I had a hypothesis that the brains of procrastinators\nwere actually different than the brains of other people. And to test this, I found an MRI lab that actually let me scan both my brain and the brain of a proven\nnon-procrastinator, so I could compare them. I actually brought them here\nto show you today. I want you to take a look carefully\nto see if you can notice a difference. I know that if you're not\na trained brain expert, it's not that obvious,\nbut just take a look, OK? So here's the brain\nof a non-procrastinator.",
+      "start_ms": 160803
+    },
+    {
+      "index": 23,
+      "text": "(Laughter)",
+      "start_ms": 211835
+    },
+    {
+      "index": 24,
+      "text": "Now ... here's my brain.",
+      "start_ms": 214133
+    },
+    {
+      "index": 25,
+      "text": "(Laughter)",
+      "start_ms": 218280
+    },
+    {
+      "index": 26,
+      "text": "There is a difference. Both brains have a Rational\nDecision-Maker in them, but the procrastinator's brain also has an Instant Gratification Monkey. Now, what does this mean\nfor the procrastinator? Well, it means everything's fine\nuntil this happens.",
+      "start_ms": 223713
+    },
+    {
+      "index": 27,
+      "text": "[This is a perfect time\nto get some work done.] [Nope!]",
+      "start_ms": 237793
+    },
+    {
+      "index": 28,
+      "text": "So the Rational Decision-Maker\nwill make the rational decision to do something productive, but the Monkey doesn't like that plan, so he actually takes the wheel, and he says, \"Actually, let's read\nthe entire Wikipedia page of the Nancy Kerrigan/\nTonya Harding scandal, because I just remembered\nthat that happened.",
+      "start_ms": 240439
+    },
+    {
+      "index": 29,
+      "text": "(Laughter)",
+      "start_ms": 256042
+    },
+    {
+      "index": 30,
+      "text": "Then --",
+      "start_ms": 257082
+    },
+    {
+      "index": 31,
+      "text": "(Laughter)",
+      "start_ms": 258264
+    },
+    {
+      "index": 32,
+      "text": "Then we're going to go over to the fridge, to see if there's anything new\nin there since 10 minutes ago. After that, we're going to go\non a YouTube spiral that starts with videos\nof Richard Feynman talking about magnets and ends much, much later\nwith us watching interviews with Justin Bieber's mom.",
+      "start_ms": 259551
+    },
+    {
+      "index": 33,
+      "text": "(Laughter)",
+      "start_ms": 275083
+    },
+    {
+      "index": 34,
+      "text": "\"All of that's going to take a while, so we're not going to really have room\non the schedule for any work today. Sorry!\"",
+      "start_ms": 277295
+    },
+    {
+      "index": 35,
+      "text": "(Sigh)",
+      "start_ms": 283795
+    },
+    {
+      "index": 36,
+      "text": "Now, what is going on here? The Instant Gratification Monkey\ndoes not seem like a guy you want behind the wheel. He lives entirely in the present moment. He has no memory of the past,\nno knowledge of the future, and he only cares about two things: easy and fun.",
+      "start_ms": 286325
+    },
+    {
+      "index": 37,
+      "text": "Now, in the animal world, that works fine. If you're a dog and you spend your whole life doing\nnothing other than easy and fun things, you're a huge success!",
+      "start_ms": 304338
+    },
+    {
+      "index": 38,
+      "text": "(Laughter)",
+      "start_ms": 313470
+    },
+    {
+      "index": 39,
+      "text": "And to the Monkey, humans are just another animal species. You have to keep well-slept, well-fed\nand propagating into the next generation, which in tribal times\nmight have worked OK. But, if you haven't noticed,\nnow we're not in tribal times. We're in an advanced civilization,\nand the Monkey does not know what that is. Which is why we have\nanother guy in our brain, the Rational Decision-Maker, who gives us the ability to do things\nno other animal can do. We can visualize the future. We can see the big picture. We can make long-term plans. And he wants to take\nall of that into account. And he wants to just have us do whatever makes sense\nto be doing right now. Now, sometimes it makes sense to be doing things that are easy and fun, like when you're having dinner\nor going to bed or enjoying well-earned leisure time. That's why there's an overlap. Sometimes they agree. But other times, it makes much more sense to be doing things that are harder\nand less pleasant, for the sake of the big picture. And that's when we have a conflict. And for the procrastinator, that conflict tends to end\na certain way every time, leaving him spending a lot of time\nin this orange zone, an easy and fun place that's entirely\nout of the Makes Sense circle. I call it the Dark Playground.",
+      "start_ms": 315405
+    },
+    {
+      "index": 40,
+      "text": "(Laughter)",
+      "start_ms": 390287
+    },
+    {
+      "index": 41,
+      "text": "Now, the Dark Playground is a place that all of you procrastinators\nout there know very well. It's where leisure activities happen at times when leisure activities\nare not supposed to be happening. The fun you have in the Dark Playground isn't actually fun,\nbecause it's completely unearned, and the air is filled with guilt,\ndread, anxiety, self-hatred -- all of those good procrastinator feelings. And the question is, in this situation,\nwith the Monkey behind the wheel, how does the procrastinator ever get\nhimself over here to this blue zone, a less pleasant place, but where\nreally important things happen?",
+      "start_ms": 391935
+    },
+    {
+      "index": 42,
+      "text": "Well, turns out the procrastinator\nhas a guardian angel, someone who's always looking\ndown on him and watching over him in his darkest moments -- someone called the Panic Monster.",
+      "start_ms": 425125
+    },
+    {
+      "index": 43,
+      "text": "(Laughter)",
+      "start_ms": 436991
+    },
+    {
+      "index": 44,
+      "text": "Now, the Panic Monster\nis dormant most of the time, but he suddenly wakes up\nanytime a deadline gets too close or there's danger of public embarrassment, a career disaster or some other\nscary consequence. And importantly, he's the only thing\nthe Monkey is terrified of. Now, he became very relevant\nin my life pretty recently, because the people of TED\nreached out to me about six months ago and invited me to do a TED Talk.",
+      "start_ms": 442386
+    },
+    {
+      "index": 45,
+      "text": "(Laughter)",
+      "start_ms": 469913
+    },
+    {
+      "index": 46,
+      "text": "Now, of course, I said yes. It's always been a dream of mine\nto have done a TED Talk in the past.",
+      "start_ms": 475058
+    },
+    {
+      "index": 47,
+      "text": "(Laughter)",
+      "start_ms": 480818
+    },
+    {
+      "index": 48,
+      "text": "(Applause) But in the middle of all this excitement, the Rational Decision-Maker seemed\nto have something else on his mind. He was saying, \"Are we clear\non what we just accepted? Do we get what's going to be now\nhappening one day in the future? We need to sit down\nand work on this right now.\" And the Monkey said, \"Totally agree,\nbut let's just open Google Earth and zoom in to the bottom of India,\nlike 200 feet above the ground, and scroll up for two and a half hours\ntil we get to the top of the country, so we can get a better feel for India.\"",
+      "start_ms": 484814
+    },
+    {
+      "index": 49,
+      "text": "(Laughter)",
+      "start_ms": 517777
+    },
+    {
+      "index": 50,
+      "text": "So that's what we did that day.",
+      "start_ms": 523149
+    },
+    {
+      "index": 51,
+      "text": "(Laughter)",
+      "start_ms": 524658
+    },
+    {
+      "index": 52,
+      "text": "As six months turned into four\nand then two and then one, the people of TED decided\nto release the speakers. And I opened up the website,\nand there was my face staring right back at me. And guess who woke up?",
+      "start_ms": 528604
+    },
+    {
+      "index": 53,
+      "text": "(Laughter)",
+      "start_ms": 541283
+    },
+    {
+      "index": 54,
+      "text": "So the Panic Monster\nstarts losing his mind, and a few seconds later,\nthe whole system's in mayhem.",
+      "start_ms": 545430
+    },
+    {
+      "index": 55,
+      "text": "(Laughter)",
+      "start_ms": 550674
+    },
+    {
+      "index": 56,
+      "text": "And the Monkey -- remember,\nhe's terrified of the Panic Monster -- boom, he's up the tree! And finally, finally, the Rational Decision-Maker\ncan take the wheel and I can start working on the talk.",
+      "start_ms": 555511
+    },
+    {
+      "index": 57,
+      "text": "Now, the Panic Monster explains all kinds of pretty insane\nprocrastinator behavior, like how someone like me\ncould spend two weeks unable to start the opening\nsentence of a paper, and then miraculously find\nthe unbelievable work ethic to stay up all night\nand write eight pages. And this entire situation,\nwith the three characters -- this is the procrastinator's system. It's not pretty, but in the end, it works. This is what I decided to write about\non the blog a couple of years ago.",
+      "start_ms": 565355
+    },
+    {
+      "index": 58,
+      "text": "When I did, I was amazed by the response. Literally thousands of emails came in, from all different kinds of people\nfrom all over the world, doing all different kinds of things. These are people who were nurses,\nbankers, painters, engineers and lots and lots of PhD students.",
+      "start_ms": 597631
+    },
+    {
+      "index": 59,
+      "text": "(Laughter)",
+      "start_ms": 612702
+    },
+    {
+      "index": 60,
+      "text": "And they were all writing,\nsaying the same thing: \"I have this problem too.\" But what struck me was the contrast\nbetween the light tone of the post and the heaviness of these emails. These people were writing\nwith intense frustration about what procrastination\nhad done to their lives, about what this Monkey had done to them. And I thought about this, and I said, well, if the procrastinator's system\nworks, then what's going on? Why are all of these people\nin such a dark place?",
+      "start_ms": 614727
+    },
+    {
+      "index": 61,
+      "text": "Well, it turns out that there's\ntwo kinds of procrastination. Everything I've talked about today,\nthe examples I've given, they all have deadlines. And when there's deadlines, the effects of procrastination\nare contained to the short term because the Panic Monster gets involved. But there's a second kind\nof procrastination that happens in situations\nwhen there is no deadline. So if you wanted a career\nwhere you're a self-starter -- something in the arts,\nsomething entrepreneurial -- there's no deadlines on those things\nat first, because nothing's happening, not until you've gone out\nand done the hard work to get momentum, get things going. There's also all kinds of important things\noutside of your career that don't involve any deadlines, like seeing your family or exercising\nand taking care of your health, working on your relationship or getting out of a relationship\nthat isn't working.",
+      "start_ms": 643538
+    },
+    {
+      "index": 62,
+      "text": "Now if the procrastinator's only mechanism\nof doing these hard things is the Panic Monster, that's a problem, because in all of these\nnon-deadline situations, the Panic Monster doesn't show up. He has nothing to wake up for, so the effects of procrastination,\nthey're not contained; they just extend outward forever. And it's this long-term\nkind of procrastination that's much less visible\nand much less talked about than the funnier, short-term\ndeadline-based kind. It's usually suffered\nquietly and privately. And it can be the source of a huge amount of long-term\nunhappiness, and regrets. And I thought, that's why\nthose people are emailing, and that's why they're\nin such a bad place. It's not that they're cramming\nfor some project. It's that long-term procrastination\nhas made them feel like a spectator, at times, in their own lives. The frustration is not\nthat they couldn't achieve their dreams; it's that they weren't even\nable to start chasing them.",
+      "start_ms": 687588
+    },
+    {
+      "index": 63,
+      "text": "So I read these emails\nand I had a little bit of an epiphany -- that I don't think\nnon-procrastinators exist. That's right -- I think all of you\nare procrastinators. Now, you might not all be a mess, like some of us,",
+      "start_ms": 744713
+    },
+    {
+      "index": 64,
+      "text": "(Laughter)",
+      "start_ms": 761210
+    },
+    {
+      "index": 65,
+      "text": "and some of you may have\na healthy relationship with deadlines, but remember: the Monkey's sneakiest trick is when the deadlines aren't there.",
+      "start_ms": 762763
+    },
+    {
+      "index": 66,
+      "text": "Now, I want to show you one last thing. I call this a Life Calendar. That's one box for every week\nof a 90-year life. That's not that many boxes, especially since we've already\nused a bunch of those. So I think we need to all take a long,\nhard look at that calendar. We need to think about what\nwe're really procrastinating on, because everyone is procrastinating\non something in life. We need to stay aware\nof the Instant Gratification Monkey. That's a job for all of us. And because there's not\nthat many boxes on there, it's a job that should\nprobably start today.",
+      "start_ms": 771249
+    },
+    {
+      "index": 67,
+      "text": "Well, maybe not today, but ...",
+      "start_ms": 813307
+    },
+    {
+      "index": 68,
+      "text": "(Laughter)",
+      "start_ms": 816331
+    },
+    {
+      "index": 69,
+      "text": "You know. Sometime soon.",
+      "start_ms": 817996
+    },
+    {
+      "index": 70,
+      "text": "Thank you.",
+      "start_ms": 821393
+    },
+    {
+      "index": 71,
+      "text": "(Applause)",
+      "start_ms": 822626
+    }
+  ]
+}

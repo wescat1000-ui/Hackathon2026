@@ -1,4 +1,18 @@
+node_modules/
+dist/
 .env
-venv/
+.env.*
+!.env.example
+.DS_Store
+# Local backend observability credentials
+observability/backend.env.local
 __pycache__/
+.venv/
+backend/data/
+.pytest_cache/
+coverage.xml
+htmlcov/
+.coverage
+.scannerwork/
+venv/
 *.pyc
